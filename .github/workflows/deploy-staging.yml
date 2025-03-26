@@ -1,7 +1,7 @@
 name: Stage the app
 
 on:
-  push:
+  pull_request:
     types: [labeled]
 
 env:
