@@ -2,7 +2,7 @@ name: Stage the app
 
 on:
   push:
-    types: [ labeled ]
+    types: [labeled]
 
 env:
   IMAGE_REGISTRY_URL: ghcr.io
