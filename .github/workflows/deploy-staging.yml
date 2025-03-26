@@ -1,13 +1,13 @@
-name: Stage the app
+name: Deploy to staging
 
 on:
-  push:
-    types: [ labeled ]
+  pull_request:
+    types: [labeled]
 
 env:
   IMAGE_REGISTRY_URL: ghcr.io
   DOCKER_IMAGE_NAME: shantanu-dutta-azure-ttt
-  AZURE_WEBAPP_NAME: shantanu-dutta-azure-ttt-app
+  AZURE_WEBAPP_NAME: shantanu-dutta-ttt-app
 
 jobs:
   # This workflow contains a single job called "build"
@@ -98,3 +98,5 @@ jobs:
             az logout
             az cache purge
             az account clear
+
+
