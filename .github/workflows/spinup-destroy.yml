@@ -1,6 +1,5 @@
 name: Configure Azure environment
 
-
 on:
   pull_request:
     types: [labeled]
@@ -48,7 +47,7 @@ jobs:
   destroy-azure-resources:
     runs-on: ubuntu-latest
 
-    if: contains(github.events.pull_request.labels.*.name, 'destroy environment')
+    if: contains(github.event.pull_request.labels.*.name, 'destroy environment')
 
     steps:
       - name: Checkout repository
