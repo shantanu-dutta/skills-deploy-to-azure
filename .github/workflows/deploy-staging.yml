@@ -18,7 +18,7 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'stage')
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 16
@@ -37,7 +37,7 @@ jobs:
     name: Build image and store in GitHub container registry
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       - name: Download build artifact
         uses: actions/download-artifact@v4
